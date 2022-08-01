@@ -19,7 +19,6 @@ import * as React from "react";
 import mountains from "../Exercise02/assets/mountains.jpeg";
 
 import Grid from "@mui/material/Grid";
-import { color, positions } from "@mui/system";
 
 export default function Exercise02() {
   const [movies, setMovies] = useState([]);
@@ -52,13 +51,12 @@ export default function Exercise02() {
   const filterMOvies = () => {
     const moviesFiler = movies.filter((item) => item.genres.includes(genre));
     setMoviesFilter(moviesFiler);
-    console.log(moviesFiler, "filter");
   };
 
   useEffect(() => {
     handleMovieFetch();
-    console.log(moviesFilter, "accadetalle");
   }, []);
+
   useEffect(() => {
     filterMOvies();
   }, [genre]);

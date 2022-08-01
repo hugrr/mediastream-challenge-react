@@ -76,19 +76,16 @@ export default function Exercise01() {
     if (JSON.stringify(moviesCart) === JSON.stringify(discountRules[0].m)) {
       setDiscount(0.25);
       setDisabled(false);
-      console.log("primero");
     } else if (
       JSON.stringify(moviesCart) === JSON.stringify(discountRules[1].m)
     ) {
       setDiscount(0.5);
       setDisabled(false);
-      console.log("segundo");
     } else if (
       JSON.stringify(moviesCart) === JSON.stringify(discountRules[2].m)
     ) {
       setDiscount(0.1);
       setDisabled(false);
-      console.log("tercero");
     } else {
       setApliDiscount(false);
       setDisabled(true);
