@@ -63,11 +63,12 @@ export default function Exercise02() {
 
   const changeOrder = () => {
     if (!order) {
-      setMoviesFilter(moviesFilter.reverse());
+      setMoviesFilter(moviesFilter.sort((a, b) => a.year - b.year));
       setOrder(true);
     }
     if (order) {
-      setMoviesFilter(moviesFilter.sort());
+      setMoviesFilter(moviesFilter.sort((a, b) => b.year - a.year));
+
       setOrder(false);
     }
   };
